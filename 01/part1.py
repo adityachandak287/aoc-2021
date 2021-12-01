@@ -1,6 +1,6 @@
-nums = []
-with open("01/input") as file:
-    nums = [int(x) for x in file.readlines()]
+import sys
+
+nums = [int(x) for x in sys.stdin.readlines()]
 
 count = 0
 prev = nums[0]
