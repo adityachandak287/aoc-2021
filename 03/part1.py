@@ -5,7 +5,7 @@ readings = sys.stdin.readlines()
 gamma = 0
 epsilon = 0
 
-ans = [[0,0] for _ in range(len(readings[0].strip()))]
+ans = [[0, 0] for _ in range(len(readings[0].strip()))]
 
 for i, reading in enumerate(readings):
     for j, digit in enumerate(reading.strip()):
