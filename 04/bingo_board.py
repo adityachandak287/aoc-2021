@@ -4,6 +4,7 @@ class BingoBoard:
         self.cols = 5
         self.board = []
         self.all = set()
+        self.completed = False
         for row in rows:
             currRow = [int(x) for x in row.strip().split()]
             self.board.append(currRow)
