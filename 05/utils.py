@@ -56,3 +56,19 @@ class Line:
             upper = max(self.p1.y, self.p2.y)
             for y in range(lower, upper+1):
                 yield Point(self.p1.x, y)
+        else:
+            xDir = 1 if self.p2.x > self.p1.x else -1
+            yDir = 1 if self.p2.y > self.p1.y else -1
+            x = self.p1.x
+            y = self.p1.y
+            for _ in range(abs(self.p2.x - self.p1.x) + 1):
+                yield Point(x, y)
+                x += xDir
+                y += yDir
+
+
+def parseLine(line):
+    points = line.split(" -> ")
+    [x1, y1] = [int(c) for c in points[0].split(",")]
+    [x2, y2] = [int(c) for c in points[1].split(",")]
+    return Line(Point(x1, y1), Point(x2, y2))
