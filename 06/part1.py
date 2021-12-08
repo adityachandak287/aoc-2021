@@ -2,7 +2,9 @@ import sys
 
 state = [int(x) for x in sys.stdin.readline().strip().split(",")]
 
-for day in range(1, 81):
+DAYS = 80
+
+for _ in range(DAYS):
     dayCount = len(state)
     for idx, fish in enumerate(state):
         if fish > 0 and fish < 8:
